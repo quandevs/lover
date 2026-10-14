@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Do You Love Me? 💕</title>
+  <meta name="description" content="A cute and playful interactive question: Do you love me?">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient floating hearts background -->
+  <div class="ambient-hearts" id="ambientHearts" aria-hidden="true"></div>
+
+  <!-- Audio control for sound effects -->
+  <button id="soundToggle" class="sound-toggle" title="Toggle Sound" aria-label="Toggle sound effects">
+    <span id="soundIcon">🔊</span>
+  </button>
+
+  <main class="main-container">
+    <div class="love-card" id="loveCard">
+      <!-- Media wrapper -->
+      <div class="gif-wrapper">
+        <img 
+          id="displayGif" 
+          src="gif.gif" 
+          alt="Cute animated bear asking a question" 
+          class="gif-image active"
+          loading="eager"
+        >
+      </div>
+
+      <!-- Text heading -->
+      <h1 id="mainTitle" class="question-title">Do you love me?</h1>
+
+      <!-- Subtitle for extra charm -->
+      <p id="subMessage" class="sub-message">Please answer honestly... 🥺</p>
+
+      <!-- Buttons wrapper -->
+      <div class="actions-area" id="actionsArea">
+        <button id="btnYes" class="btn btn-yes" type="button">
+          <span class="btn-text">Yes</span>
+          <span class="heart-icon">💖</span>
+        </button>
+
+        <button id="btnNo" class="btn btn-no" type="button">
+          <span id="noBtnText" class="btn-text">No</span>
+        </button>
+      </div>
+
+      <!-- Celebration extra card (initially hidden) -->
+      <div id="celebrationDetails" class="celebration-details hidden">
+        <p class="love-quote">"You just made my heart the happiest in the whole wide world!" ✨</p>
+        <button id="btnReplay" class="btn btn-replay" type="button">
+          <span>Ask me again 💕</span>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Canvas for celebration confetti & hearts -->
+  <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
